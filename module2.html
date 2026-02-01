@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cataract & Glaucoma Modules | Zena Alwaily Ophthalmology E-Learning</title>
+<meta name="description" content="Ophthalmology e-learning modules on cataract and glaucoma for NHS and university medical students. Includes OSCE checklists and NICE/NICE CKS-aligned content. Created by Zena Alwaily.">
+<meta name="author" content="Zena Alwaily">
+
+  <style>
+    :root{
+      /* Geeky-Medics-like: clean teal + slate + off-white */
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --ink:#0f172a;        /* slate-900 */
+      --muted:#475569;      /* slate-600 */
+      --line:#e2e8f0;       /* slate-200 */
+      --brand:#0f766e;      /* teal-700 */
+      --brand2:#14b8a6;     /* teal-500 */
+      --focus:#0284c7;      /* sky-600 */
+      --good:#059669;       /* emerald-600 */
+      --bad:#e11d48;        /* rose-600 */
+      --shadow: 0 10px 24px rgba(15,23,42,.08);
+      --r:14px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background: var(--bg);
+      color:var(--ink);
+    }
+    a{color:var(--focus); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      border-bottom: 3px solid rgba(15,118,110,.10);
+      background: linear-gradient(180deg, #ffffff, #ffffff);
+    }
+    .wrap{max-width:1040px; margin:0 auto; padding:18px 16px;}
+    .top{
+      display:flex; gap:14px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;
+    }
+    .brand{
+      display:flex; gap:12px; align-items:center;
+    }
+    .mark{
+      width:44px;height:44px;border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: var(--shadow);
+    }
+    h1{margin:0; font-size:20px; letter-spacing:.2px}
+    .sub{margin:6px 0 0; color:var(--muted); font-size:13px; line-height:1.45; max-width:760px}
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;
+    }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      border:1px solid var(--line);
+      background:#ffffff;
+      padding:8px 10px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:12px;
+      box-shadow: 0 2px 10px rgba(15,23,42,.04);
+    }
+
+    main{max-width:1040px; margin:0 auto; padding:14px 16px 28px; display:grid; gap:12px}
+    .card{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      padding:14px;
+    }
+    .grid{display:grid; gap:12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));}
+    .card h2{margin:0 0 10px; font-size:16px}
+    .tiny{font-size:12px; color:var(--muted); line-height:1.55}
+    ul,ol{margin:8px 0 0 18px; color:var(--muted); line-height:1.65}
+    .callout{
+      border:1px solid rgba(15,118,110,.18);
+      background: rgba(15,118,110,.05);
+      border-radius: 12px;
+      padding:12px;
+    }
+    .callout b{color: var(--ink)}
+    .kbd{
+      font-family: var(--mono);
+      font-size: 11px;
+      padding:2px 6px;
+      border:1px solid var(--line);
+      border-bottom-color: #cbd5e1;
+      border-radius: 7px;
+      background: #f8fafc;
+      color: var(--muted);
+      display:inline-block;
+      transform: translateY(-1px);
+    }
+
+    /* Tabs */
+    .tabbar{
+      display:flex; gap:8px; flex-wrap:wrap; align-items:center;
+      border:1px solid var(--line);
+      background:#ffffff;
+      border-radius: 999px;
+      padding:6px;
+      box-shadow: 0 2px 10px rgba(15,23,42,.04);
+    }
+    .tab{
+      cursor:pointer;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      font-weight:800;
+      font-size:13px;
+    }
+    .tab[aria-selected="true"]{
+      color:#ffffff;
+      background: linear-gradient(90deg, var(--brand), var(--brand2));
+    }
+
+    /* Images */
+    figure{margin:0}
+    .img{
+      width:100%;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      overflow:hidden;
+      background:#f1f5f9;
+    }
+    .img img{width:100%; display:block}
+    figcaption{margin-top:8px; color:var(--muted); font-size:12px; line-height:1.45}
+
+    /* Details / checklists */
+    details{
+      border:1px solid var(--line);
+      border-radius: 12px;
+      background:#ffffff;
+      padding:10px 12px;
+      margin-top:10px;
+    }
+    details summary{
+      cursor:pointer;
+      font-weight:900;
+      color: var(--ink);
+      outline:none;
+    }
+    .checklist li{margin-bottom:6px}
+    .tag{
+      display:inline-flex; align-items:center;
+      padding:5px 9px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:#ffffff;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    /* Quiz */
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .btn{
+      cursor:pointer;
+      border:1px solid var(--line);
+      background:#ffffff;
+      color:var(--ink);
+      padding:10px 12px;
+      border-radius: 12px;
+      font-weight:800;
+      font-size:13px;
+    }
+    .btn:hover{border-color:#cbd5e1}
+    .btn.primary{
+      border:none;
+      background: linear-gradient(90deg, var(--brand), var(--brand2));
+      color:#ffffff;
+    }
+    .progress{
+      height:10px; border-radius:999px; overflow:hidden;
+      border:1px solid var(--line);
+      background:#f1f5f9;
+      margin:10px 0 0;
+    }
+    .bar{height:100%; width:0%; background: linear-gradient(90deg, var(--brand), var(--brand2));}
+    .choice{display:block; width:100%; text-align:left; margin:8px 0}
+    .ok{color:var(--good); font-weight:900}
+    .bad{color:var(--bad); font-weight:900}
+
+    .hidden{display:none !important;}
+
+    footer{
+      max-width:1040px; margin:0 auto; padding:0 16px 26px;
+      color:var(--muted); font-size:12px; text-align:center;
+    }
+    .credit{
+      display:inline-block;
+      border:1px solid var(--line);
+      background:#ffffff;
+      border-radius:999px;
+      padding:8px 12px;
+      box-shadow: 0 2px 10px rgba(15,23,42,.04);
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>Ophthalmology MiniLearn — Cataract & Glaucoma</h1>
+          <p class="sub">
+            A compact learning resource for NHS clinical learners and university students. Focus: structured assessment,
+            safe recognition of red flags, and first-line management principles aligned to NICE / NICE CKS.
+          </p>
+          <div class="meta">
+            <div class="pill">Audience: NHS + university clinical learners</div>
+            <div class="pill">Format: 2 short modules + OSCE checklist + quiz</div>
+            <div class="pill">Navigation: use the <span class="kbd">Module</span> tabs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabbar" role="tablist" aria-label="Modules">
+        <button class="tab" id="tab-cataract" role="tab" aria-selected="true" aria-controls="panel-cataract" onclick="switchModule('cataract')">
+          Module 1: Cataract
+        </button>
+        <button class="tab" id="tab-glaucoma" role="tab" aria-selected="false" aria-controls="panel-glaucoma" onclick="switchModule('glaucoma')">
+          Module 2: Glaucoma
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Academic hook (shared) -->
+  <section class="card">
+    <h2>Clinical framing (shared across modules)</h2>
+    <div class="grid">
+      <div class="callout">
+        <p class="tiny" style="margin:0">
+          <b>Assessment mindset:</b> Start with function and safety. Record monocular visual acuity (with correction if available),
+          assess pupils (including RAPD), then examine the anterior segment and posterior segment where appropriate.
+        </p>
+      </div>
+      <div class="callout">
+        <p class="tiny" style="margin:0">
+          <b>Escalation red flags:</b> acute painful red eye, rapidly reduced vision, headache/nausea, corneal haze,
+          fixed mid-dilated pupil, trauma, or suspected acute angle-closure. Treat as urgent until proven otherwise.
+        </p>
+      </div>
+      <div class="callout">
+        <p class="tiny" style="margin:0">
+          <b>Decision standard:</b> document impact on activities of daily living, and use evidence-based guidance for referral/management.
+          For cataract, referral decisions should not rely on visual acuity alone.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE 1: CATARACT -->
+  <section id="panel-cataract" role="tabpanel" aria-labelledby="tab-cataract">
+    <section class="card">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <h2 style="margin:0">Module 1 — Cataract</h2>
+        <span class="tag">NICE-aligned summary</span>
+      </div>
+
+      <div class="grid" style="margin-top:10px">
+        <div class="callout">
+          <p class="tiny" style="margin:0">
+            <b>Definition:</b> lens opacity causing reduced visual quality (blur, glare, reduced contrast).
+          </p>
+          <ul>
+            <li>Blurred vision + reduced contrast</li>
+            <li>Glare/halos (often night driving)</li>
+            <li>Colour desaturation</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <p class="tiny" style="margin:0"><b>High-yield patterns:</b></p>
+          <ul>
+            <li><b>Nuclear</b>: central yellow/brown; may cause myopic shift (“second sight”).</li>
+            <li><b>Cortical</b>: spoke-like; glare can be prominent.</li>
+            <li><b>Posterior subcapsular</b>: disproportionate glare; near vision affected early; worse in bright light.</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <p class="tiny" style="margin:0">
+            <b>Referral principle:</b> Cataract surgery access should be based on criteria beyond visual acuity alone
+            (e.g., functional impairment/quality of life).
+          </p>
+          <p class="tiny" style="margin:8px 0 0">
+            See NICE cataract guidance and quality standard for referral criteria.
+          </p>
+        </div>
+      </div>
+
+      <details>
+        <summary>OSCE station checklist (Eye exam structure; refer to Geeky Medics)</summary>
+        <p class="tiny" style="margin-top:10px">
+          Checklist structure adapted for teaching from the Geeky Medics eye examination OSCE checklist/guide
+          (use their full resource for expanded detail and videos).
+        </p>
+        <ol class="checklist">
+          <li><b>Intro:</b> hand hygiene, introduce self/role, confirm identity, explain exam, gain consent, check pain.</li>
+          <li><b>Distance VA:</b> each eye separately with correction; record; use pinhole if reduced; if very poor → CF/HM/PL.</li>
+          <li><b>Near VA</b> (if relevant to complaint), and <b>colour vision</b> if indicated.</li>
+          <li><b>Visual fields</b> to confrontation (screening).</li>
+          <li><b>External inspection:</b> lids, conjunctiva, cornea clarity; pupil size/shape.</li>
+          <li><b>Pupillary reflexes:</b> direct/consensual; assess for RAPD if indicated.</li>
+          <li><b>Ocular movements</b> and symptom provocation (diplopia/pain if present).</li>
+          <li><b>Red reflex</b> and lens/anterior segment assessment (if equipment available).</li>
+          <li><b>Fundoscopy</b> if view possible (or document limited view and plan).</li>
+          <li><b>Closure:</b> thank patient, wash hands, summarise findings, suggest next steps/referral as appropriate.</li>
+        </ol>
+      </details>
+    </section>
+
+    <section class="grid">
+      <figure class="card">
+        <div class="img">
+          <img
+            alt="Eye anatomy diagram"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Blausen%200388%20EyeAnatomy%2001.png"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>Lens anatomy context (Wikimedia Commons).</figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="img">
+          <img
+            alt="Posterior subcapsular cataract photo"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Posterior%20subcapsular%20cataract.jpg"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>Posterior subcapsular cataract pattern (Wikimedia Commons).</figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="img">
+          <img
+            alt="Nuclear sclerosis cataract photo"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Nuclear%20sclerosis.jpg"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>Nuclear sclerosis cataract pattern (Wikimedia Commons).</figcaption>
+      </figure>
+    </section>
+
+    <section class="card" id="quiz-cataract">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <h2 style="margin:0">Cataract formative quiz (3 questions)</h2>
+        <div class="row">
+          <button class="btn" onclick="resetQuiz('cataract')">Reset</button>
+          <button class="btn primary" onclick="startQuiz('cataract')">Start</button>
+        </div>
+      </div>
+      <p class="tiny">Score: <span id="score-cataract">0</span>/3</p>
+      <div class="progress"><div class="bar" id="bar-cataract"></div></div>
+      <div id="qwrap-cataract" style="margin-top:12px"></div>
+    </section>
+  </section>
+
+  <!-- MODULE 2: GLAUCOMA -->
+  <section id="panel-glaucoma" role="tabpanel" aria-labelledby="tab-glaucoma" class="hidden">
+    <section class="card">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <h2 style="margin:0">Module 2 — Glaucoma</h2>
+        <span class="tag">NICE CKS-aligned safety</span>
+      </div>
+
+      <div class="grid" style="margin-top:10px">
+        <div class="callout">
+          <p class="tiny" style="margin:0">
+            <b>Core concept:</b> glaucoma is a progressive optic neuropathy with characteristic optic disc changes and visual field loss.
+            Intraocular pressure is an important modifiable risk factor, but not the definition.
+          </p>
+          <ul>
+            <li>Risk factors include age, family history, steroid exposure, myopia, and others.</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <p class="tiny" style="margin:0"><b>Chronic open-angle:</b> often asymptomatic early.</p>
+          <ul>
+            <li>Detected by optic nerve appearance and visual fields.</li>
+            <li>Management aims to reduce IOP according to specialist pathway.</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <p class="tiny" style="margin:0">
+            <b>Acute angle-closure:</b> time-critical emergency. Typical features include painful red eye, headache/nausea,
+            blurred vision/halos, and markedly raised IOP.
+          </p>
+          <ul>
+            <li>Escalate urgently and follow local protocol/ophthalmology advice.</li>
+          </ul>
+        </div>
+      </div>
+
+      <details>
+        <summary>OSCE station checklist (Eye exam + glaucoma emphasis; refer to Geeky Medics)</summary>
+        <p class="tiny" style="margin-top:10px">
+          Checklist structure adapted for teaching from the Geeky Medics eye examination OSCE checklist/guide;
+          glaucoma-specific emphasis added using NICE CKS red-flag features and escalation priorities.
+        </p>
+        <ol class="checklist">
+          <li><b>Intro:</b> hand hygiene, identity, explain, consent; ask about pain, headache, nausea, rapid vision change.</li>
+          <li><b>VA:</b> measure monocular VA with correction; consider pinhole; document clearly.</li>
+          <li><b>Pupils:</b> size/shape/reactivity; look for RAPD if indicated.</li>
+          <li><b>External/anterior segment:</b> redness, corneal haze, shallow anterior chamber (if assessed), mid-dilated pupil.</li>
+          <li><b>Visual fields:</b> confrontation screening.</li>
+          <li><b>Fundoscopy:</b> optic disc assessment if view possible (cupping/asymmetry), otherwise document limitations.</li>
+          <li><b>If available/trained:</b> IOP measurement; otherwise escalate based on clinical picture and local guidance.</li>
+          <li><b>Acute angle-closure suspected:</b> treat as emergency and escalate immediately.</li>
+          <li><b>Closure:</b> summarise findings, safety-net, referral plan (urgent vs routine) per local pathway.</li>
+        </ol>
+      </details>
+    </section>
+
+    <section class="grid">
+      <!-- FIXED IMAGES (working file names) -->
+      <figure class="card">
+        <div class="img">
+          <img
+            alt="Optic disc topography in glaucoma"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Optic_disc_topography%2C_case_1%2C_R%2C_glaucoma.png"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>Example of optic disc change in glaucoma (Wikimedia Commons).</figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="img">
+          <img
+            alt="Patient and tonometer"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Patient_and_tonometer.jpg"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>Tonometry (IOP measurement) (Wikimedia Commons).</figcaption>
+      </figure>
+
+      <figure class="card">
+        <div class="img">
+          <img
+            alt="Gonioscopy of the iris angle"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Kammerwinkel.jpg"
+            loading="lazy"
+          />
+        </div>
+        <figcaption>Gonioscopy image of the anterior chamber angle (Wikimedia Commons).</figcaption>
+      </figure>
+    </section>
+
+    <section class="card" id="quiz-glaucoma">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <h2 style="margin:0">Glaucoma formative quiz (3 questions)</h2>
+        <div class="row">
+          <button class="btn" onclick="resetQuiz('glaucoma')">Reset</button>
+          <button class="btn primary" onclick="startQuiz('glaucoma')">Start</button>
+        </div>
+      </div>
+      <p class="tiny">Score: <span id="score-glaucoma">0</span>/3</p>
+      <div class="progress"><div class="bar" id="bar-glaucoma"></div></div>
+      <div id="qwrap-glaucoma" style="margin-top:12px"></div>
+    </section>
+  </section>
+
+  <!-- Sources -->
+  <section class="card">
+    <h2>Sources and attributions</h2>
+    <p class="tiny">
+      Clinical framing aligns to NICE and NICE CKS principles (including cataract referral not based on VA alone, and acute angle-closure emergency features).
+      OSCE checklist structure references Geeky Medics eye examination resources (adapted for teaching).
+    </p>
+
+    <details>
+      <summary>NICE / NICE CKS</summary>
+      <ul>
+        <li><a href="https://www.nice.org.uk/guidance/ng77">NICE NG77: Cataracts in adults — management</a></li>
+        <li><a href="https://www.nice.org.uk/guidance/qs180/chapter/quality-statement-2-referral-for-cataract-surgery">NICE QS180: referral for cataract surgery (not VA alone)</a></li>
+        <li><a href="https://cks.nice.org.uk/topics/glaucoma/management/acute-angle-closure-angle-closure-glaucoma/">NICE CKS: acute angle-closure / angle-closure glaucoma management</a></li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Geeky Medics (OSCE structure reference)</summary>
+      <ul>
+        <li><a href="https://geekymedics.com/eye-examination-osce-guide/">Eye examination OSCE guide</a></li>
+        <li><a href="https://geekymedics.com/wp-content/uploads/2025/02/Eye-Examination-OSCE-Checklist-Geeky-Medics.pdf">Eye examination OSCE checklist (PDF)</a></li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Image file pages (Wikimedia Commons)</summary>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Blausen_0388_EyeAnatomy_01.png">Eye anatomy diagram</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Posterior_subcapsular_cataract.jpg">Posterior subcapsular cataract</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Nuclear_sclerosis.jpg">Nuclear sclerosis</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Optic_disc_topography,_case_1,_R,_glaucoma.png">Optic disc topography (glaucoma)</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Patient_and_tonometer.jpg">Patient and tonometer</a></li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Kammerwinkel.jpg">Gonioscopy of the iris angle</a></li>
+      </ul>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <span class="credit">Created by <strong>Zena Alwaily</strong> © 2026</span>
+</footer>
+
+<script>
+  function switchModule(which){
+    const catTab = document.getElementById('tab-cataract');
+    const glaTab = document.getElementById('tab-glaucoma');
+    const catPanel = document.getElementById('panel-cataract');
+    const glaPanel = document.getElementById('panel-glaucoma');
+
+    const isCat = which === 'cataract';
+    catTab.setAttribute('aria-selected', isCat ? 'true' : 'false');
+    glaTab.setAttribute('aria-selected', isCat ? 'false' : 'true');
+
+    catPanel.classList.toggle('hidden', !isCat);
+    glaPanel.classList.toggle('hidden', isCat);
+
+    if(isCat && !quizState.cataract.started) resetQuiz('cataract');
+    if(!isCat && !quizState.glaucoma.started) resetQuiz('glaucoma');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  const quizzes = {
+    cataract: [
+      {
+        q: "Which cataract type often affects near vision early and is worse in bright light?",
+        choices: ["Nuclear sclerosis", "Cortical cataract", "Posterior subcapsular cataract"],
+        answer: 2,
+        explain: "Posterior subcapsular cataract commonly causes disproportionate glare and early near-vision impairment."
+      },
+      {
+        q: "A typical cataract symptom pattern is:",
+        choices: ["Sudden painful red eye", "Gradual blur with glare/halos", "Transient monocular vision loss episodes"],
+        answer: 1,
+        explain: "Cataract typically causes gradual blur, glare/halos and reduced contrast, rather than acute pain."
+      },
+      {
+        q: "A NICE-aligned principle for cataract surgery referral is:",
+        choices: ["Refuse surgery if VA is above a fixed threshold", "Base access on VA alone", "Do not refuse surgery based on VA alone; consider functional impact"],
+        answer: 2,
+        explain: "Quality standards emphasise access criteria beyond VA alone, including functional/quality-of-life impact."
+      }
+    ],
+    glaucoma: [
+      {
+        q: "Glaucoma is best defined as:",
+        choices: ["Any raised intraocular pressure", "A progressive optic neuropathy with characteristic disc/field changes", "An infection of the optic nerve"],
+        answer: 1,
+        explain: "IOP is a risk factor; glaucoma is defined by progressive optic nerve damage and field loss."
+      },
+      {
+        q: "Which presentation is most suggestive of acute angle-closure glaucoma?",
+        choices: ["Asymptomatic early disease found on screening", "Severe eye pain with headache/nausea and blurred vision/halos", "Gradual painless loss of central vision"],
+        answer: 1,
+        explain: "Acute angle closure is typically painful with systemic symptoms and visual disturbance; treat as emergency."
+      },
+      {
+        q: "A safe first step when acute angle-closure is suspected is to:",
+        choices: ["Arrange routine outpatient follow-up", "Reassure and discharge", "Escalate urgently and follow local emergency protocol/ophthalmology advice"],
+        answer: 2,
+        explain: "NICE CKS treats suspected acute angle closure as urgent; escalation and local protocol are key."
+      }
+    ]
+  };
+
+  const quizState = {
+    cataract: { current: 0, score: 0, started: false },
+    glaucoma: { current: 0, score: 0, started: false }
+  };
+
+  function startQuiz(which){
+    quizState[which].current = 0;
+    quizState[which].score = 0;
+    quizState[which].started = true;
+    document.getElementById(`score-${which}`).textContent = "0";
+    document.getElementById(`bar-${which}`).style.width = "0%";
+    renderQuestion(which);
+  }
+
+  function resetQuiz(which){
+    quizState[which].started = false;
+    quizState[which].current = 0;
+    quizState[which].score = 0;
+    document.getElementById(`score-${which}`).textContent = "0";
+    document.getElementById(`bar-${which}`).style.width = "0%";
+    document.getElementById(`qwrap-${which}`).innerHTML =
+      "<p class='tiny'>Press <b>Start</b> to begin. Use this as a formative check after reviewing the module content.</p>";
+  }
+
+  function renderQuestion(which){
+    const state = quizState[which];
+    const wrap = document.getElementById(`qwrap-${which}`);
+    wrap.innerHTML = "";
+
+    const item = quizzes[which][state.current];
+    const box = document.createElement("div");
+    box.innerHTML = `
+      <p class="tiny"><b>Q${state.current+1}.</b> ${item.q}</p>
+      <div id="choices-${which}"></div>
+      <div id="fb-${which}" style="margin-top:10px;font-weight:900"></div>
+    `;
+    wrap.appendChild(box);
+
+    const cWrap = box.querySelector(`#choices-${which}`);
+    item.choices.forEach((c, idx) => {
+      const btn = document.createElement("button");
+      btn.className = "btn choice";
+      btn.textContent = c;
+      btn.onclick = () => checkAnswer(which, idx);
+      cWrap.appendChild(btn);
+    });
+  }
+
+  function checkAnswer(which, idx){
+    const state = quizState[which];
+    const item = quizzes[which][state.current];
+    const fb = document.getElementById(`fb-${which}`);
+
+    const wrap = document.getElementById(`qwrap-${which}`);
+    wrap.querySelectorAll(".choice").forEach(b => b.disabled = true);
+
+    if(idx === item.answer){
+      state.score++;
+      fb.innerHTML = `<span class="ok">Correct</span> <span class="tiny">${item.explain}</span>`;
+    } else {
+      fb.innerHTML = `<span class="bad">Not quite</span> <span class="tiny">${item.explain}</span>`;
+    }
+
+    document.getElementById(`score-${which}`).textContent = String(state.score);
+
+    const pct = Math.round(((state.current+1)/quizzes[which].length)*100);
+    document.getElementById(`bar-${which}`).style.width = pct + "%";
+
+    setTimeout(() => {
+      state.current++;
+      if(state.current < quizzes[which].length){
+        renderQuestion(which);
+      } else {
+        document.getElementById(`qwrap-${which}`).innerHTML =
+          `<p><b>Completed.</b> Score: ${state.score}/${quizzes[which].length}</p>
+           <p class="tiny">If any items were missed, revisit the module summary and repeat the quiz.</p>`;
+      }
+    }, 850);
+  }
+
+  // Initial
+  resetQuiz('cataract');
+  resetQuiz('glaucoma');
+</script>
+</body>
+</html>
